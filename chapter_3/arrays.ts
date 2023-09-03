@@ -6,7 +6,7 @@ const e = [2, 'b']      // (string | number)[]
 
 let f = ['red']
 f.push('blue')
-f.push(true)            // Error TS2345: Argument of type 'true' is not
+// f.push(true)            // Error TS2345: Argument of type 'true' is not
                         // assignable to parameter of type 'string'
 
 let g = []              // any
@@ -15,7 +15,7 @@ g.push('red')           // (string | number)[]
 
 let h: number[] = []    // number[]    
 h.push(1)               // number[]
-h.push('red')           // Error TS2345: Argument of type '"red"' is not
+// h.push('red')           // Error TS2345: Argument of type '"red"' is not
                         // assignable to parameter of type 'number'
                         
 let d1 = [1, 'a']
@@ -34,7 +34,7 @@ function builArray() {
     return a
 }
 let myArray = builArray()   // (string | number)[]
-myArray.push(true)          // Error 2345: Argument of type 'true' is not
+// myArray.push(true)          // Error 2345: Argument of type 'true' is not
                             // assignaable to parameter of type 'string | number'.
 
 

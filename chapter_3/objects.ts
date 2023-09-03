@@ -1,7 +1,7 @@
 let a: object = {
     b: 'x'
 }
-a.b // Error TS2339: Property 'b' does not exist on type 'object'.
+// a.b // Error TS2339: Property 'b' does not exist on type 'object'.
 
 let a1 = {
     b: 'x'
@@ -40,22 +40,22 @@ c = new Person('matt', 'smith') // OK
 
 let a3: {b: number}
 
-a3 = {}                         // Error TS2741: Property 'b' is missing in type '{}'
+// a3 = {}                         // Error TS2741: Property 'b' is missing in type '{}'
                                 // but required in type '{b: number}'.
 
 a3 = {
     b:1,
-    c: 2                        // Error TS2322: Type 'b: number; c: number}' is not assignable
+    // c: 2                        // Error TS2322: Type 'b: number; c: number}' is not assignable
 }                               // to type '{b: number}'. Object literal may only specify known
                                 // properties, and 'c' does not exist in type '{b: number}'.
 
 // definite assignment
 let i: number
-let j = i * 3                   // Error TS2454: Variable 'i' is used
+// let j = i * 3                   // Error TS2454: Variable 'i' is used
                                 // before being assigned
 
 let i1
-let j1 = i1 * 3                 // Error TS2532: Object is possible
+// let j1 = i1 * 3                 // Error TS2532: Object is possible
                                 // 'undefined'.
 
 let a4: {
@@ -71,9 +71,9 @@ a4 = {b: 1, c: 'd'}
 a4 = {b: 1, c: 'd'}
 a4 = {b: 1, 10: true}
 a4 = {b: 1, 10: true, 20: false}
-a4 = {10: true}                 // Error TS2741: Property 'b' is missing in type
+// a4 = {10: true}                 // Error TS2741: Property 'b' is missing in type
                                 // '{10: true}'.
-a4 = {b: 1, 33: 'red'}          // Error TS2741: Type 'string' is not assignable
+// a4 = {b: 1, 33: 'red'}          // Error TS2741: Type 'string' is not assignable
                                 // to type 'boolean'.
 
 // index signatures
@@ -91,7 +91,7 @@ let user: {
     firsname: 'abby'
 }
 user.firsname // string
-user.firsname = 'abbey with an e'   // Error TS2540: Cannot assign to 'firstname' because it
+// user.firsname = 'abbey with an e'   // Error TS2540: Cannot assign to 'firstname' because it
                                     // is a read-only property
 
 let danger: {}
