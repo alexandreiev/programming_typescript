@@ -4,6 +4,7 @@
 // without an explicit start date. Update reserve ’s implementation to support this
 // new overloaded signature.
 
+type Reservation = void
 
 type Reserve = {
     (from: Date, to: Date, destination: string): Reservation

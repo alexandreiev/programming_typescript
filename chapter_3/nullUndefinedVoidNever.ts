@@ -25,16 +25,16 @@ function d() {
 // (e) Another function that returns never
 function e() {
     while (true) {
-        doSomething()
+        // doSomething()
     }
 }
 
 // strict null Checking
-function addDelicioysFish(pizza: Pizza) {
-    return pizza.addAnchovies() // Uncaught TypeError: Cannot read
-                                // property 'addAnchovies' of null
-}
-// TypeScript lets this fly with strictNullChecks = false
-addDelicioysFish(null)
+// function addDelicioysFish(pizza: Pizza) {
+//     return pizza.addAnchovies() // Uncaught TypeError: Cannot read
+//                                 // property 'addAnchovies' of null
+// }
+// // TypeScript lets this fly with strictNullChecks = false
+// addDelicioysFish(null)
 
 export{}

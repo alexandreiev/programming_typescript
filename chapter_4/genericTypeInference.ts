@@ -1,5 +1,5 @@
 function map<T, U>(array: T[], f: (item: T) => U): U[] {
-    return null
+    return []
 }
 
 map(
@@ -13,10 +13,10 @@ map<string, boolean> (
     _ => _ === 'a'
 )
 
-map<string> (           // Error TS 2558: Expected 2 type arguments, but got 1.
-    ['a', 'b', 'c'],
-    _ => _ === 'a'
-)
+// map<string> (           // Error TS 2558: Expected 2 type arguments, but got 1.
+//     ['a', 'b', 'c'],
+//     _ => _ === 'a'
+// )
 
 // OK, because boolean is assignable to boolean | string
 map<string, boolean | string>(
@@ -33,9 +33,9 @@ map<string, boolean | number>(
 let promise = new Promise(resolve => 
     resolve(45)
 )
-promise.then(result =>      // Inferred as {}
-    result * 4          // Error TS2362: The left-hand side of an arithmetic operation must    
-)                       // be of type 'any', 'number', 'bigint', or an enum type.
+// promise.then(result =>      // Inferred as {}
+//     result * 4          // Error TS2362: The left-hand side of an arithmetic operation must    
+// )                       // be of type 'any', 'number', 'bigint', or an enum type.
 
 let promise1 = new Promise<number>(resolve =>
     resolve(45)

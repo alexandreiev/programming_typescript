@@ -20,7 +20,7 @@ let driver1: Person = {
 }
 
 type Color = 'red'
-type Color = 'blue' // Error TS 2300: Duplicate identifier 'Color'.
+// type Color = 'blue' // Error TS 2300: Duplicate identifier 'Color'.
 
 type Color1 = 'red'
 let x = Math.random() < .5

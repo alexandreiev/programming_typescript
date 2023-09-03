@@ -1,3 +1,5 @@
+type Reservation = void
+
 // Shorthand call signature
 type Log = (message: string, userId?: string) => void
 
@@ -38,7 +40,7 @@ type Reserve2 = {
         destination?: string): Reservation
 }
 
-let reserve: Reserve2 = (
+let reserve2: Reserve2 = (
     from: Date,
     toOrDestination: Date | string,
     destination?: string
@@ -53,7 +55,7 @@ let reserve: Reserve2 = (
 
 // keeping overload signatures specific
 
-let reserve: Reserve1 = (
+let reserve3: Reserve1 = (
     from: any,
     toOrDestination: any,
     destination?: any
@@ -73,38 +75,37 @@ function getMonth1(date: Date): number {
 
 
 type CreateElement = {
-    (tag: 'a'): HTMLAnchorElement
-    (tag: 'canvas'): HTMLCanvasElement
+    // (tag: 'a'): HTMLAnchorElement
+    // (tag: 'canvas'): HTMLCanvasElement
     (tag: 'table'): HTMLTableElement
     (tag: string): HTMLElement
 }
 
-let createElement: CreateElement = (tag: string): HTMLElement => {
-    // ...
-}
+// let createElement: CreateElement = (tag: string): HTMLElement => {
+//     return document.createElement('div');
+// }
 
 
 function createElement1(tag: 'a'): HTMLAnchorElement
 function createElement1(tag: 'canvas'): HTMLCanvasElement
 function createElement1(tag: 'table'): HTMLTableElement
 function createElement1(tag: string): HTMLElement {
-    // ..
+    return new HTMLElement();
 }
-
-
-function warnUser(warning) {
-    if (warnUser.wasCalled) {
-        return
-    }
-    warnUser.wasCalled = true
-    alert(warning)
-}
-warnUser.wasCaller = false
 
 type WarnUser = {
     (warning: string): void
     wasCalled: boolean
 }
+
+// function warnUser(warning) {
+//     if (warnUser.wasCalled) {
+//         return
+//     }
+//     warnUser.wasCalled = true
+//     alert(warning)
+// }
+// warnUser.wasCaller = false
 
 
 export {}

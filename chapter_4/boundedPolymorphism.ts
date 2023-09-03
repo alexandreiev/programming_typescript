@@ -55,7 +55,7 @@ function fill(length: number, value: string): string[] {
 }
 
 let a2 = call(fill, 10, 'a')         // string[]
-let b2 = call(fill, 10)              // Error TS2554: Expected 3 arguments; got 2.
-let c2 = call(fill, 10, 'a', 'z')    // Error TS2554: Expected 3 arguments; got 4.
+// let b2 = call(fill, 10)              // Error TS2554: Expected 3 arguments; got 2.
+// let c2 = call(fill, 10, 'a', 'z')    // Error TS2554: Expected 3 arguments; got 4.
 
 export {}

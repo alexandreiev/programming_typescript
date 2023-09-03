@@ -9,10 +9,10 @@ function times(
 
 times(n => console.log(n), 4)
 
-function f(n) {     // Error TS7006: Parameter 'n' implicitly has an 'any' type.
-    console.log(n)
-}
+// function f(n) {     // Error TS7006: Parameter 'n' implicitly has an 'any' type.
+//     console.log(n)
+// }
 
-times(f, 4)
+// times(f, 4)
 
 export {}

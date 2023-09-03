@@ -30,12 +30,12 @@ let names = [
     {firstName: 'xin'}
 ]
 
-let result = filter(
-    names,
-    _ => _.firstName.startWith('b')     // Error TS2339: Property 'firstName' does not exist on type 'object'.
-)
+// let result = filter(
+//     names,
+//     _ => _.firstName.startWith('b')     // Error TS2339: Property 'firstName' does not exist on type 'object'.
+// )
 
-result[0].firstName // Error TS2339: Property 'firstName' does not exist 
+// result[0].firstName // Error TS2339: Property 'firstName' does not exist 
                     // on type 'object'.
 
 

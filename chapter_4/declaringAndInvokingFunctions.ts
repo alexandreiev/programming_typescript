@@ -31,8 +31,8 @@ let greet5 = new Function('name', 'return "hello " + name')
 add(1, 2)   // evalueaates to 3
 greet('Crystal')    // evaluates to 'hello Ctystal'
 
-add(1)      // Error TS2554: Expected 2 arguments, but got 1.
-add(1, 'a') // Error TS2456: Argument of type '"a"' is not assignable
+// add(1)      // Error TS2554: Expected 2 arguments, but got 1.
+// add(1, 'a') // Error TS2456: Argument of type '"a"' is not assignable
             // to parameter of type 'number'.
 
 export{}

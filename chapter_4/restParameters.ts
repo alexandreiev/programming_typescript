@@ -9,7 +9,7 @@ function sumVariadic(): number {
         .from(arguments)
         .reduce((total, n) => total + n, 0)
 }
-sumVariadic(1, 2, 3)  // Error TS2554: Expected 0 arguments, but got 3.
+// sumVariadic(1, 2, 3)  // Error TS2554: Expected 0 arguments, but got 3.
 
 
 function sumVariadicSafe(...numbers: number[]): number {
