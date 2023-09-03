@@ -9,10 +9,10 @@ type MyEvent1<T extends HTMLElement> = {
 }
 
 
-let buttonEvent1: MyEvent<HTMLButtonElement> = {
-    target: myElement,
-    type: string
-}
+// let buttonEvent1: MyEvent<HTMLButtonElement> = {
+//     target: myElement,
+//     type: string
+// }
 
 
 // Good
@@ -25,12 +25,12 @@ type Myevent2<
 } 
 
 // Bad
-type MyEvent3<
-Target extends HTMLElement = HTMLElement,
-Type extends string     // Error TS2706: Required type parameters may
-> = {                   // not follow optional type parameters.
-    target: Target
-    type: Type
-}
+// type MyEvent3<
+// Target extends HTMLElement = HTMLElement,
+// Type extends string     // Error TS2706: Required type parameters may
+// > = {                   // not follow optional type parameters.
+//     target: Target
+//     type: Type
+// }
 
 export {}
