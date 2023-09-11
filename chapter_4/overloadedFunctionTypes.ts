@@ -63,11 +63,11 @@ let reserve3: Reserve1 = (
     // ...
 }
 
-function getMonth(date: any): number | undefined {
-    if (date instanceof Date) {
-        return date.getMonth()
-    }
-}
+// function getMonth(date: any): number | undefined {
+//     if (date instanceof Date) {
+//         return date.getMonth()
+//     }
+// }
 
 function getMonth1(date: Date): number {
     return date.getDate()
