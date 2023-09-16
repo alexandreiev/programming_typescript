@@ -1,5 +1,5 @@
 import { threadId } from "worker_threads"
-import { SafeEmitter } from "./SafeEmitter"
+import { SafeEmitter } from "./SafeEmitter.js"
 
 let worker = new Worker('workerScript.js')
 // worker.onmessage = e => {

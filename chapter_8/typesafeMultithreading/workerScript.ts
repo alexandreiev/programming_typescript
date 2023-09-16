@@ -4,7 +4,7 @@
 // }
 
 import { threadId } from "worker_threads"
-import { SafeEmitter } from "./SafeEmitter"
+import { SafeEmitter } from "./SafeEmitter.js"
 
 type Message = string
 type ThreadID = number
